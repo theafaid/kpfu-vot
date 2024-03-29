@@ -32,8 +32,6 @@ const recordLangs = (record) => {
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 Здравствуйте!
-                <i class="fas fa-hand"></i>
-
             </h2>
         </template>
 
