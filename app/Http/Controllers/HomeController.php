@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Group;
+use App\Models\History;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         return Inertia::render('Dashboard', [
-            'groups' => Group::forUser(auth()->user())->get(),
+            'history' => History::feed(auth()->user()),
         ]);
     }
 

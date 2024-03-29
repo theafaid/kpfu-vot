@@ -32,6 +32,21 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
+        $user = User::create([
+            'name' => 'Test',
+            'email' => 'test@test.com',
+            'password' => bcrypt('password'),
+            'email_verified_at' => now(),
+        ]);
+
+
+        $group1 = $user->groups()->create([
+            'name' => '20-2320Б',
+            'uid' => '20-2320Б',
+            'description' => 'Русский язык как иностранный',
+        ]);
+
+        $group1->languages()->attach(Language::whereIn('slug', ['en', 'es', 'tr', 'ar', 'fr'])->pluck('id')->toArray());
     }
 }
 

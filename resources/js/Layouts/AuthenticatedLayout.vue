@@ -6,13 +6,14 @@ import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
+import ApplicationLogoSm from "@/Components/ApplicationLogoSm.vue";
 
 const showingNavigationDropdown = ref(false);
 </script>
 
 <template>
     <div>
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-10">
             <nav class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,9 +22,8 @@ const showingNavigationDropdown = ref(false);
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('welcome')">
-                                    <ApplicationLogo
-                                            style="height: 200px; object-fit: contain;"
-                                            class="block h-16 w-auto fill-current text-gray-800"
+                                    <ApplicationLogoSm
+                                            class=" block h-16 w-auto fill-current text-gray-800"
                                     />
                                 </Link>
                             </div>
@@ -75,7 +75,8 @@ const showingNavigationDropdown = ref(false);
 
                                     <template #content>
                                         <DropdownLink :href="route('logout')" method="post" as="button">
-                                            Log Out
+                                            Выйти
+                                            <i class="fa fa-sign-out"></i>
                                         </DropdownLink>
                                     </template>
                                 </Dropdown>

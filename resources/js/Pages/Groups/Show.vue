@@ -1,17 +1,7 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import DeleteUserForm from './Partials/DeleteUserForm.vue';
-import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue';
-import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue';
 import {Head, useForm} from '@inertiajs/vue3';
-import DangerButton from "@/Components/DangerButton.vue";
-import PrimaryButton from "@/Components/PrimaryButton.vue";
 import {nextTick, ref} from "vue";
-import InputLabel from "@/Components/InputLabel.vue";
-import SecondaryButton from "@/Components/SecondaryButton.vue";
-import InputError from "@/Components/InputError.vue";
-import TextInput from "@/Components/TextInput.vue";
-import Modal from "@/Components/Modal.vue";
 
 defineProps({
     group: null,
@@ -24,7 +14,15 @@ const typingTimer = ref(null);
 let result = {}
 
 const handleInput = (group) => {
+    if (text.value.trim() == '') {
+        return;
+    }
+
     loading.value = true;
+
+    if (typingTimer.value) {
+        clearTimeout(typingTimer.value);
+    }
     typingTimer.value = setTimeout(() => {
         callMethodAfterTypingStopped(group);
     }, 2000);
@@ -41,6 +39,7 @@ const callMethodAfterTypingStopped = (group) => {
     // Call your method here after the user stops typing for 1 second
         axios.post(route('translate'), {
             text: text.value,
+            group_id: group.id,
             languages: pluck(group.languages, 'slug')
         }).then(res => {
             result = res.data.result;
@@ -62,53 +61,75 @@ const form = useForm({
 </script>
 
 <template>
-    <Head title="Profile"/>
+    <Head :title="group.name"/>
 
     <AuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ group.name }}
+                Группа:
+                <span class="inline-block bg-blue-500 text-white text-sm font-semibold px-2 py-1 rounded-full">
+                  {{ group.name }}
+                </span>
+
             </h2>
         </template>
 
         <div class="container mx-auto p-6">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
-                <!-- Textarea with Image Upload and Voice Recorder -->
                 <div class="relative">
+                    <textarea
+                        v-model="text"
+                        @input="handleInput(group)"
+                        class="w-full h-24   border border-gray-300 rounded-md p-3 pr-10 focus:outline-none focus:ring focus:border-blue-500 resize-none mb-4 shadow-md bg-white text-gray-800 placeholder-gray-400 leading-normal"
+                        placeholder="введите свой текст здесь..."
+                    ></textarea>
 
-                       <textarea
-                           v-model="text"
-                           @input="handleInput(group)"
-                           class="w-full h-48 border border-gray-300 rounded-md p-3 pr-10 focus:outline-none focus:ring focus:border-blue-500 resize-none mb-4"
-                           placeholder="Text Here"
-                       ></textarea>
 
-                    <label for="image" class="absolute right-0 top-0 mt-3 mr-3 cursor-pointer">
-                        <svg class="w-6 h-6 text-gray-400 hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                        <input id="image" type="file" class="hidden">
-                    </label>
+<!--                    <label for="image" class="absolute right-0 top-0 mt-3 mr-3 cursor-pointer">-->
+<!--                        <svg class="w-6 h-6 text-gray-400 hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>-->
+<!--                        <input id="image" type="file" class="hidden">-->
+<!--                    </label>-->
 
-                    <!-- Voice Recorder -->
-                    <label for="microphone" class="absolute right-12 top-0 mt-3 mr-3 cursor-pointer">
-                        <svg class="w-6 h-6 text-gray-400 hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13.55v-3.1a7 7 0 0114 0v3.1m-4 0h2m-6 0H7m10-3.1a3 3 0 00-6 0v3.1m-4 0h2m8-3.1a3 3 0 016 0v3.1m-4 0h2"></path></svg>
-                        <input id="microphone" type="file" class="hidden">
-                    </label>
+<!--                    &lt;!&ndash; Voice Recorder &ndash;&gt;-->
+<!--                    <label for="microphone" class="absolute right-12 top-0 mt-3 mr-3 cursor-pointer">-->
+<!--                        <svg class="w-6 h-6 text-gray-400 hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13.55v-3.1a7 7 0 0114 0v3.1m-4 0h2m-6 0H7m10-3.1a3 3 0 00-6 0v3.1m-4 0h2m8-3.1a3 3 0 016 0v3.1m-4 0h2"></path></svg>-->
+<!--                        <input id="microphone" type="file" class="hidden">-->
+<!--                    </label>-->
                 </div>
 
                 <!-- Language Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                    <div v-for="language in group.languages" class="whitespace-normal break-words rounded-lg border border-blue-gray-50 bg-white p-4 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none">
-                        <div class="mb-2 flex items-center gap-3">
-                            <a :href="''" class="block font-sans text-base font-medium leading-relaxed tracking-normal text-blue-gray-900 antialiased transition-colors hover:text-pink-500">
+                    <div style="background: #f7f7f7" v-for="language in group.languages" class="whitespace-normal break-words rounded-lg border border-blue-gray-50 bg-white p-4 font-sans text-sm font-normal text-blue-gray-500  shadow-blue-gray-500/1 focus:outline-none">
+                        <div class=" flex items-center gap-3">
+                            <a href="#" class="block font-sans text-base font-medium leading-relaxed tracking-normal text-blue-gray-900 antialiased transition-colors hover:text-pink-500">
                                 <div class="flex items-center gap-1">
-                                    <h1 class="block font-sans font-normal antialiased" style="font-size: 22px; font-weight: bold">{{ language.name_native }}</h1>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                        class="-mt-0.5 h-4 w-4 text-yellow-400"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                            clip-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                    <h1 class="block font-sans font-normal antialiased" style="font-size: 22px; font-weight: bold">
+                                        {{ language.name_native }}
+                                    </h1>
                                 </div>
                             </a>
                         </div>
-                        <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased mb-4" v-if="! loading">
+                        <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased mb-4" v-if="! loading && result[language.slug]" style="background: #fff; font-size: 25px; padding: 10px">
                             {{ result[language.slug] }}
                         </p>
-                        <img src="/loading.gif" v-if="loading" />
+
+                        <span class="flex justify-center items-center" v-if="loading">
+                            <span class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></span>
+                        </span>
+
                     </div>
                 </div>
 

@@ -24,7 +24,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/groups', [\App\Http\Controllers\GroupController::class, 'index'])->name('groups.index');
     Route::post('/groups', [\App\Http\Controllers\GroupController::class, 'store'])->name('groups.store');
+    Route::put('/groups/{group:id}', [\App\Http\Controllers\GroupController::class, 'update'])->name('groups.update');
     Route::get('/groups/{group:uid}', [\App\Http\Controllers\GroupController::class, 'show'])->name('groups.show');
+    Route::delete('/groups/{group:id}', [\App\Http\Controllers\GroupController::class, 'destroy'])->name('groups.destroy');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

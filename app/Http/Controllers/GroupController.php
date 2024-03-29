@@ -21,7 +21,7 @@ class GroupController extends Controller
     public function index()
     {
         return Inertia::render('Groups/Index', [
-            'groups' => Group::forUser(auth()->user())->get(),
+            'groups' => Group::forUser(auth()->user())->latest()->get(),
             'languages' => Language::fetch(),
         ]);
     }
@@ -36,7 +36,7 @@ class GroupController extends Controller
 
         $group->languages()->attach($request->languages);
 
-        return Redirect::route('groups.index');
+        return back();
     }
 
     public function show(Group $group)
@@ -51,50 +51,38 @@ class GroupController extends Controller
     }
 
     /**
-     * Display the user's profile form.
-     */
-    public function edit(Request $request): Response
-    {
-        return Inertia::render('Profile/Edit', [
-            'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
-            'status' => session('status'),
-        ]);
-    }
-
-    /**
      * Update the user's profile information.
      */
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+    public function update(Group $group, GroupStoreRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
-
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        if (Gate::denies('update', $group)) {
+            abort (403);
         }
 
-        $request->user()->save();
+        $group->update([
+            'name' => $request->name,
+            'uid' => Str::slug($request->name) . time(),
+            'description' => $request->description,
+        ]);
 
-        return Redirect::route('profile.edit');
+        if (! empty($request->languages)) {
+            $group->languages()->sync($request->languages);
+        }
+
+        return back();
     }
 
     /**
      * Delete the user's account.
      */
-    public function destroy(Request $request): RedirectResponse
+    public function destroy(Group $group): RedirectResponse
     {
-        $request->validate([
-            'password' => ['required', 'current_password'],
-        ]);
+        if (Gate::denies('update', $group)) {
+            abort (403);
+        }
 
-        $user = $request->user();
+        $group->delete();
 
-        Auth::logout();
-
-        $user->delete();
-
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return Redirect::to('/');
+        return back();
     }
 }
