@@ -359,7 +359,7 @@ const updateGroup = () => {
                             <div class="relative">
                                 <div class="">
                                     <div class="mb-2 flex items-center gap-3">
-                                        <a
+                                        <link
                                             :href="route('groups.show', group.uid)"
                                             class="block font-sans text-base font-medium leading-relaxed tracking-normal text-blue-gray-900 antialiased transition-colors hover:text-blue-500">
                                             <div class="flex items-center gap-1">
@@ -380,7 +380,7 @@ const updateGroup = () => {
                                                     {{ group.name }}
                                                 </h2>
                                             </div>
-                                        </a>
+                                        </link>
                                     </div>
                                     <div class="absolute top-0 right-0 flex gap-2 mt-2 mr-2">
                                         <a :href="route('groups.show', group.uid)" class="text-green-500 hover:text-green-600">
