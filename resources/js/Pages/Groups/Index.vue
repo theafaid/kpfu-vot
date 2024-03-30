@@ -381,12 +381,12 @@ const updateGroup = () => {
                                                     {{ group.name }}
                                                 </h2>
                                             </div>
-                                        </link>
+                                        </Link>
                                     </div>
                                     <div class="absolute top-0 right-0 flex gap-2 mt-2 mr-2">
-                                        <a :href="route('groups.show', group.uid)" class="text-green-500 hover:text-green-600">
+                                        <Link :href="route('groups.show', group.uid)" class="text-green-500 hover:text-green-600">
                                             <i class="fa fa-sign-in"></i>
-                                        </a>
+                                        </Link>
                                         <button class="text-blue-500 hover:text-blue-600" @click="updating(group)">
                                             <i class="fa fa-edit"></i>
                                         </button>
