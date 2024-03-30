@@ -9,6 +9,7 @@ import SecondaryButton from "@/Components/SecondaryButton.vue";
 import InputError from "@/Components/InputError.vue";
 import TextInput from "@/Components/TextInput.vue";
 import Modal from "@/Components/Modal.vue";
+import { Link } from '@inertiajs/vue3';
 
 defineProps({
     groups: [],
@@ -359,7 +360,7 @@ const updateGroup = () => {
                             <div class="relative">
                                 <div class="">
                                     <div class="mb-2 flex items-center gap-3">
-                                        <link
+                                        <Link
                                             :href="route('groups.show', group.uid)"
                                             class="block font-sans text-base font-medium leading-relaxed tracking-normal text-blue-gray-900 antialiased transition-colors hover:text-blue-500">
                                             <div class="flex items-center gap-1">
