@@ -209,9 +209,10 @@ function handleImageError() {
                 </main>
 
                 <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+                    Кфу {{new Date().getFullYear()}} <br>
                     Сделано: Фаид Абдельрахман
                     <br>
-                    создан кфу {{new Date().getFullYear()}} под руководством преподавателя: Динары Илгизаровны Фахретдиновой.
+                    под руководством преподавателя: Динары Фахретдиновой.
                 </footer>
             </div>
         </div>
