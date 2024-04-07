@@ -7,15 +7,22 @@
  * @return mixed
  */
 if (! function_exists('cloudTranslate')) {
-    function cloudTranslate($text, $source = 'ar', $target = 'en')
+    function cloudTranslate($text, $source = 'en', $target = 'es')
     {
-        try {
-            $url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" . $source . "&tl=" . $target . "&dt=t&q=" . urlencode($text);
-            $res = \Illuminate\Support\Facades\Http::get($url);
-            return $res->json()[0][0][0];
-        } catch (\Exception $ex) {
-            return $text;
+        $res = \Illuminate\Support\Facades\Http::withHeaders([
+        ])->post('https://translation.googleapis.com/language/translate/v2?key=AIzaSyB7SFP79Yz4YZxNDRiAlNPDbl8i6GI7Lh8', [
+            'key' => 'AIzaSyB7SFP79Yz4YZxNDRiAlNPDbl8i6GI7Lh8',
+            'source' => 'en',
+            'target' => $target,
+            'q' => $text,
+            'format' => 'text',
+        ]);
+
+        if (! $res->successful()) {
+            dd($res->json());
         }
+
+        return $res->json()['data']['translations'][0]['translatedText'];
     }
 
 }
