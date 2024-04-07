@@ -12,7 +12,7 @@ if (! function_exists('cloudTranslate')) {
         $res = \Illuminate\Support\Facades\Http::withHeaders([
         ])->post('https://translation.googleapis.com/language/translate/v2?key=AIzaSyB7SFP79Yz4YZxNDRiAlNPDbl8i6GI7Lh8', [
             'key' => 'AIzaSyB7SFP79Yz4YZxNDRiAlNPDbl8i6GI7Lh8',
-            'source' => 'en',
+            'source' => $source,
             'target' => $target,
             'q' => $text,
             'format' => 'text',
