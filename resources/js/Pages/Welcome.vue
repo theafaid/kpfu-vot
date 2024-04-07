@@ -209,7 +209,11 @@ function handleImageError() {
                 </main>
 
                 <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                    Этот проект был создан кфу {{new Date().getFullYear()}}<br> под руководством преподавателя: Динары Илгизаровны Фахретдиновой.
+                    Этот проект был создан кфу {{new Date().getFullYear()}}
+                    <br>
+                    Сделано: Абдельрахманом Фаидом
+                    <br>
+                    под руководством преподавателя: Динары Илгизаровны Фахретдиновой.
                 </footer>
             </div>
         </div>
