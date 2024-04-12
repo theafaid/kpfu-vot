@@ -114,14 +114,14 @@ function handleImageError() {
                             <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
                                 <img
                                     src="/imgs/sample.png"
-                                    alt="Laravel documentation screenshot"
+                                    alt=""
                                     class="aspect-video h-full w-full flex-1 rounded-[10px] object-top drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
                                     @error="handleImageError"
                                 />
 
                                 <img
-                                    src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                    alt="Laravel documentation screenshot"
+                                    src=""
+                                    alt=""
                                     class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
                                 />
                                 <div
