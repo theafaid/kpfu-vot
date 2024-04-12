@@ -1,6 +1,6 @@
-## Проект "Вот"
+## Проект "UniGlot"
 
-https://Вот.online
+[uniglot.ru](https://uniglot.ru/)
 
 ### Функции
 
