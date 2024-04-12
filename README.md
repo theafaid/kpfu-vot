@@ -1,4 +1,4 @@
-## Проект "UniGlot"
+# Униглот
 
 [uniglot.ru](https://uniglot.ru/)
 
