@@ -3,384 +3,462 @@
         "code": "af",
         "en": "Afrikaans",
         "ru": "африкаанс",
-        "native": "Afrikaans"
+        "native": "Afrikaans",
+        "flag": "https://flagsapi.com/ZA/flat/64.png"
     },
     {
         "code": "sq",
         "en": "Albanian",
         "ru": "албанский",
-        "native": "shqiptare"
+        "native": "shqiptare",
+        "flag": "https://flagsapi.com/AL/flat/64.png"
     },
     {
         "code": "ar",
         "en": "Arabic",
         "ru": "арабский",
-        "native": "عربي"
+        "native": "عربي",
+        "flag": "https://flagsapi.com/SA/flat/64.png"
     },
     {
         "code": "az",
         "en": "Azerbaijani",
         "ru": "азербайджанский",
-        "native": "Azərbaycan"
+        "native": "Azərbaycan",
+        "flag": "https://flagsapi.com/AZ/flat/64.png"
     },
+
+
     {
         "code": "eu",
         "en": "Basque",
         "ru": "Баскский",
-        "native": "euskara"
+        "native": "euskara",
+        "flag": "https://flagsapi.com/BQ/flat/64.png"
     },
     {
         "code": "bn",
         "en": "Bengali",
         "ru": "Бенгальский",
-        "native": "বাংলা"
+        "native": "বাংলা",
+        "flag": "https://flagsapi.com/BD/flat/64.png"
     },
     {
         "code": "be",
         "en": "Belarusian",
         "ru": "белорусский",
-        "native": "беларускі"
+        "native": "беларускі",
+        "flag": "https://flagsapi.com/BY/flat/64.png"
     },
     {
         "code": "bg",
         "en": "Bulgarian",
         "ru": "болгарский",
-        "native": "български"
+        "native": "български",
+        "flag": "https://flagsapi.com/BG/flat/64.png"
     },
     {
         "code": "ca",
         "en": "Catalan",
         "ru": "каталанский",
-        "native": "català"
+        "native": "català",
+        "flag": "https://flagsapi.com/AD/flat/64.png"
     },
     {
         "code": "zh-CN",
         "en": "Chinese Simplified",
         "ru": "Китайский упрощенный",
-        "native": "简体中文"
+        "native": "简体中文",
+        "flag": "https://flagsapi.com/CN/flat/64.png"
     },
     {
         "code": "zh-TW",
         "en": "Chinese Traditional",
         "ru": "Китайский традиционный",
-        "native": "中國傳統的"
+        "native": "中國傳統的",
+        "flag": "https://flagsapi.com/TW/flat/64.png"
     },
+
+
+
+
     {
         "code": "hr",
         "en": "Croatian",
         "ru": "хорватский",
-        "native": "Hrvatski"
+        "native": "Hrvatski",
+        "flag": "https://flagsapi.com/HR/flat/64.png"
     },
     {
         "code": "cs",
         "en": "Czech",
         "ru": "Чешский",
-        "native": "čeština"
+        "native": "čeština",
+        "flag": "https://flagsapi.com/CZ/flat/64.png"
     },
     {
         "code": "da",
         "en": "Danish",
         "ru": "датский",
-        "native": "dansk"
+        "native": "dansk",
+        "flag": "https://flagsapi.com/DK/flat/64.png"
     },
     {
         "code": "nl",
         "en": "Dutch",
         "ru": "Голландский",
-        "native": "Nederlands"
+        "native": "Nederlands",
+        "flag": "https://flagsapi.com/NL/flat/64.png"
     },
     {
         "code": "en",
         "en": "English",
         "ru": "Английский",
-        "native": "English"
+        "native": "English",
+        "flag": "https://flagsapi.com/GB/flat/64.png"
     },
     {
         "code": "eo",
         "en": "Esperanto",
         "ru": "эсперанто",
-        "native": "Esperanto"
+        "native": "Esperanto",
+        "flag": "https://flagsapi.com/EO/flat/64.png"
     },
     {
         "code": "et",
         "en": "Estonian",
         "ru": "эстонский",
-        "native": "eesti keel"
+        "native": "eesti keel",
+        "flag": "https://flagsapi.com/EE/flat/64.png"
     },
     {
         "code": "tl",
         "en": "Filipino",
         "ru": "Филиппинский",
-        "native": "Filipino"
+        "native": "Filipino",
+        "flag": "https://flagsapi.com/PH/flat/64.png"
     },
     {
         "code": "fi",
         "en": "Finnish",
         "ru": "финский",
-        "native": "Suomalainen"
+        "native": "Suomalainen",
+        "flag": "https://flagsapi.com/FI/flat/64.png"
     },
     {
         "code": "fr",
         "en": "French",
         "ru": "Французский",
-        "native": "Français"
+        "native": "Français",
+        "flag": "https://flagsapi.com/FR/flat/64.png"
     },
     {
         "code": "gl",
         "en": "Galician",
         "ru": "галисийский",
-        "native": "galego"
+        "native": "galego",
+        "flag": "https://flagsapi.com/ES/flat/64.png"
     },
     {
         "code": "ka",
         "en": "Georgian",
         "ru": "грузинский",
-        "native": "ქართული"
+        "native": "ქართული",
+        "flag": "https://flagsapi.com/GE/flat/64.png"
     },
     {
         "code": "de",
         "en": "German",
         "ru": "Немецкий",
-        "native": "Deutsch"
+        "native": "Deutsch",
+        "flag": "https://flagsapi.com/DE/flat/64.png"
     },
+
+
+
+
+
     {
         "code": "el",
         "en": "Greek",
         "ru": "Греческий",
-        "native": "Ελληνικά"
+        "native": "Ελληνικά",
+        "flag": "https://flagsapi.com/GR/flat/64.png"
     },
     {
         "code": "gu",
         "en": "Gujarati",
         "ru": "Гуджарати",
-        "native": "ગુજરાતી"
+        "native": "ગુજરાતી",
+        "flag": "https://flagsapi.com/IN/flat/64.png"
     },
     {
         "code": "ht",
         "en": "Haitian Creole",
         "ru": "гаитянский креольский",
-        "native": "Kreyòl ayisyen"
+        "native": "Kreyòl ayisyen",
+        "flag": "https://flagsapi.com/HT/flat/64.png"
     },
     {
         "code": "iw",
         "en": "Hebrew",
         "ru": "иврит",
-        "native": "עִברִית"
+        "native": "עִברִית",
+        "flag": "https://flagsapi.com/IL/flat/64.png"
     },
     {
         "code": "hi",
         "en": "Hindi",
         "ru": "хинди",
-        "native": "हिंदी"
+        "native": "हिंदी",
+        "flag": "https://flagsapi.com/IN/flat/64.png"
     },
     {
         "code": "hu",
         "en": "Hungarian",
         "ru": "Венгерский",
-        "native": "Magyar"
+        "native": "Magyar",
+        "flag": "https://flagsapi.com/HU/flat/64.png"
     },
     {
         "code": "is",
         "en": "Icelandic",
         "ru": "исландский",
-        "native": "íslenskur"
+        "native": "íslenskur",
+        "flag": "https://flagsapi.com/IS/flat/64.png"
     },
     {
         "code": "id",
         "en": "Indonesian",
         "ru": "индонезийский",
-        "native": "bahasa Indonesia"
+        "native": "bahasa Indonesia",
+        "flag": "https://flagsapi.com/ID/flat/64.png"
     },
     {
         "code": "ga",
         "en": "Irish",
         "ru": "ирландский",
-        "native": "Gaeilge"
+        "native": "Gaeilge",
+        "flag": "https://flagsapi.com/IE/flat/64.png"
     },
     {
         "code": "it",
         "en": "Italian",
         "ru": "итальянский",
-        "native": "Italiano"
+        "native": "Italiano",
+        "flag": "https://flagsapi.com/IT/flat/64.png"
     },
     {
         "code": "ja",
         "en": "Japanese",
         "ru": "Японский",
-        "native": "日本語"
+        "native": "日本語",
+        "flag": "https://flagsapi.com/JP/flat/64.png"
     },
     {
         "code": "kn",
         "en": "Kannada",
         "ru": "Каннада",
-        "native": "ಕನ್ನಡ"
+        "native": "ಕನ್ನಡ",
+        "flag": "https://flagsapi.com/IN/flat/64.png"
     },
     {
         "code": "ko",
         "en": "Korean",
         "ru": "Корейский",
-        "native": "한국인"
+        "native": "한국인",
+        "flag": "https://flagsapi.com/KR/flat/64.png"
     },
     {
         "code": "la",
         "en": "Latin",
         "ru": "латинский",
-        "native": "Latinus"
+        "native": "Latinus",
+        "flag": "https://flagsapi.com/VA/flat/64.png"
     },
     {
         "code": "lv",
         "en": "Latvian",
         "ru": "Латышский",
-        "native": "latviski"
+        "native": "latviski",
+        "flag": "https://flagsapi.com/LV/flat/64.png"
     },
     {
         "code": "lt",
         "en": "Lithuanian",
         "ru": "Литовский",
-        "native": "lietuvių"
+        "native": "lietuvių",
+        "flag": "https://flagsapi.com/LT/flat/64.png"
     },
     {
         "code": "mk",
         "en": "Macedonian",
         "ru": "македонский",
-        "native": "македонски"
+        "native": "македонски",
+        "flag": "https://flagsapi.com/MK/flat/64.png"
     },
+
+
+
     {
         "code": "ms",
         "en": "Malay",
         "ru": "малайский",
-        "native": "Melayu"
+        "native": "Melayu",
+        "flag": "https://flagsapi.com/MY/flat/64.png"
     },
     {
         "code": "mt",
         "en": "Maltese",
         "ru": "мальтийский",
-        "native": "Malti"
+        "native": "Malti",
+        "flag": "https://flagsapi.com/MT/flat/64.png"
     },
     {
         "code": "no",
         "en": "Norwegian",
         "ru": "Норвежский",
-        "native": "norsk"
+        "native": "norsk",
+        "flag": "https://flagsapi.com/NO/flat/64.png"
     },
     {
         "code": "fa",
         "en": "Persian",
         "ru": "персидский",
-        "native": "فارسی"
+        "native": "فارسی",
+        "flag": "https://flagsapi.com/IR/flat/64.png"
     },
     {
         "code": "pl",
         "en": "Polish",
         "ru": "Польский",
-        "native": "Polski"
+        "native": "Polski",
+        "flag": "https://flagsapi.com/PL/flat/64.png"
     },
     {
         "code": "pt",
         "en": "Portuguese",
         "ru": "португальский",
-        "native": "Português"
+        "native": "Português",
+        "flag": "https://flagsapi.com/PT/flat/64.png"
     },
     {
         "code": "ro",
         "en": "Romanian",
         "ru": "румынский",
-        "native": "Română"
+        "native": "Română",
+        "flag": "https://flagsapi.com/RO/flat/64.png"
     },
     {
         "code": "ru",
         "en": "Russian",
         "ru": "Русский",
-        "native": "Русский"
+        "native": "Русский",
+        "flag": "https://flagsapi.com/RU/flat/64.png"
     },
     {
         "code": "sr",
         "en": "Serbian",
         "ru": "сербский",
-        "native": "Српски"
+        "native": "Српски",
+        "flag": "https://flagsapi.com/RS/flat/64.png"
     },
     {
         "code": "sk",
         "en": "Slovak ",
         "ru": "словацкий",
-        "native": "slovenský"
+        "native": "slovenský",
+        "flag": "https://flagsapi.com/SK/flat/64.png"
     },
     {
         "code": "sl",
         "en": "Slovenian",
         "ru": "словенский",
-        "native": "Slovenščina"
+        "native": "Slovenščina",
+        "flag": "https://flagsapi.com/SI/flat/64.png"
     },
     {
         "code": "es",
         "en": "Spanish",
         "ru": "испанский",
-        "native": "Español"
+        "native": "Español",
+        "flag": "https://flagsapi.com/ES/flat/64.png"
     },
     {
         "code": "sw",
         "en": "Swahili",
         "ru": "суахили",
-        "native": "kiswahili"
+        "native": "kiswahili",
+        "flag": "https://flagsapi.com/KE/flat/64.png"
     },
     {
         "code": "sv",
         "en": "Swedish",
         "ru": "Шведский",
-        "native": "svenska"
+        "native": "svenska",
+        "flag": "https://flagsapi.com/SE/flat/64.png"
     },
     {
         "code": "ta",
         "en": "Tamil",
         "ru": "тамильский",
-        "native": "தமிழ்"
+        "native": "தமிழ்",
+        "flag": "https://flagsapi.com/IN/flat/64.png"
     },
     {
         "code": "te",
         "en": "Telugu ",
         "ru": "телугу",
-        "native": "తెలుగు"
+        "native": "తెలుగు",
+        "flag": "https://flagsapi.com/IN/flat/64.png"
     },
     {
         "code": "th",
         "en": "Thai",
         "ru": "тайский",
-        "native": "แบบไทย"
+        "native": "แบบไทย",
+        "flag": "https://flagsapi.com/TH/flat/64.png"
     },
     {
         "code": "tr",
         "en": "Turkish",
         "ru": "турецкий",
-        "native": "Türkçe"
+        "native": "Türkçe",
+        "flag": "https://flagsapi.com/TR/flat/64.png"
     },
     {
         "code": "uk",
         "en": "Ukrainian",
         "ru": "украинец",
-        "native": "українська"
+        "native": "українська",
+        "flag": "https://flagsapi.com/UA/flat/64.png"
     },
     {
         "code": "ur",
         "en": "Urdu",
         "ru": "Урду",
-        "native": "اردو"
+        "native": "اردو",
+        "flag": "https://flagsapi.com/PK/flat/64.png"
     },
     {
         "code": "vi",
         "en": "Vietnamese",
         "ru": "вьетнамский",
-        "native": "Tiếng Việt"
+        "native": "Tiếng Việt",
+        "flag": "https://flagsapi.com/VN/flat/64.png"
     },
     {
         "code": "cy",
         "en": "Welsh",
         "ru": "валлийский",
-        "native": "Cymraeg"
+        "native": "Cymraeg",
+        "flag": "https://flagsapi.com/GB-WLS/flat/64.png"
     },
     {
         "code": "yi",
         "en": "Yiddish",
         "ru": "идиш",
-        "native": "יידיש"
+        "native": "יידיש",
+        "flag": "https://flagsapi.com/IL/flat/64.png"
     }
 ]

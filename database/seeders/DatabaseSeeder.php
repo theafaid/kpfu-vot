@@ -6,6 +6,7 @@ use App\Models\Language;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,12 +24,14 @@ class DatabaseSeeder extends Seeder
 
         $languages = json_decode(file_get_contents(storage_path('lang.json')), true);
 
+
         foreach ($languages as $language) {
             Language::create([
                 'slug' => $language['code'],
                 'name_en' => $language['en'],
                 'name_ru' => $language['ru'],
                 'name_native' => $language['native'],
+                'icon_path' => $language['flag'],
             ]);
         }
 
