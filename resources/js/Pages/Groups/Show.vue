@@ -97,6 +97,12 @@ const form = useForm({
                   {{ group.name }}
                 </span>
 
+                <br>
+                <div class="mt-2 shadow-sm">
+                    <span v-for="language in group.languages" class="m-1">
+                    <img class="rounded-lg" :src="language.icon_path" style="object-fit: contain; display: inline; width: 25px">
+                    </span>
+                </div>
             </h2>
         </template>
 
