@@ -14,8 +14,11 @@ class Language extends Model
 
     public function scopeFetch($query)
     {
-        return Cache::rememberForever('languages', function () use ($query) {
-            return $query->get(['id', 'name_ru', 'name_en', 'name_native', 'slug', 'icon_path']);
-        });
+        return $query->get(['id', 'name_ru', 'name_en', 'name_native', 'slug', 'icon_path']);
+
+//        cache()->forget('languages');
+//        return Cache::rememberForever('languages', function () use ($query) {
+//            return $query->get(['id', 'name_ru', 'name_en', 'name_native', 'slug', 'icon_path']);
+//        });
     }
 }
