@@ -20,7 +20,7 @@ const pluck = (items, field) => {
 }
 
 const recordLangs = (record) => {
-    return pluck(record.group.languages, 'name_ru')
+    return pluck(record.group.languages, 'icon_path')
 }
 
 </script>
@@ -69,8 +69,8 @@ const recordLangs = (record) => {
                             {{ record.text }}
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                             <span class="inline-block bg-blue-500 text-white text-sm font-semibold px-2 py-1 rounded-full m-1" v-for="lang in recordLangs(record)">
-                                    {{ lang }}
+                             <span class="inline-block bg-blue-500 text-white text-sm font-semibold px-2 py-1 rounded-full m-1" v-for="langIcon in recordLangs(record)">
+                                                          <img :src="langIcon" width="20px" style="width: 25px; object-fit: contain; display: inline">
                             </span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
