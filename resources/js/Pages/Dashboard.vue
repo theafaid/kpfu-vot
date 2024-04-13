@@ -68,7 +68,7 @@ const recordLangs = (record) => {
                         <td class="px-6 py-4 whitespace-wrap break-all">
                             {{ record.text }}
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
+                        <td class="px-6 py-4 whitespace-wrap break-all">
                              <span class="m-1" v-for="langIcon in recordLangs(record)">
                                                           <img :src="langIcon" width="20px" style="width: 25px; object-fit: contain; display: inline">
                             </span>
