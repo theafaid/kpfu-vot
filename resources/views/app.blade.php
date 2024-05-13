@@ -16,6 +16,12 @@
         @routes
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
+
+        <style>
+            *, body {
+                background: url("/imgs/welcome-bg.jpg") 0% 0% / cover !important;
+            }
+        </style>
     </head>
     <body class="font-sans antialiased">
         @inertia
