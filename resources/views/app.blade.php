@@ -18,7 +18,7 @@
         @inertiaHead
 
         <style>
-            *, body {
+            body {
                 background: url("/imgs/welcome-bg.jpg") 0% 0% / cover !important;
             }
         </style>
