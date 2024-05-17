@@ -208,6 +208,11 @@ function handleImageError() {
                     </div>
                 </main>
 
+
+                <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+                  <img src="/imgs/kfu.png" />
+                </footer>
+
                 <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                     Кфу {{new Date().getFullYear()}} <br>
                     Сделано: Фаид Абдельрахман
