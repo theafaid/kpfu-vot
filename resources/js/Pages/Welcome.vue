@@ -210,10 +210,12 @@ function handleImageError() {
 
 
                 <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                  <img src="/imgs/kfu.png" />
-                </footer>
-
-                <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+                    <img src="/imgs/kfu.png" style="
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    object-fit: contain;
+">
                     Кфу {{new Date().getFullYear()}} <br>
                     Сделано: Фаид Абдельрахман
                     <br>
