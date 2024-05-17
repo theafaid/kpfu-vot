@@ -156,6 +156,26 @@ const showingNavigationDropdown = ref(false);
             <!-- Page Content -->
             <main>
                 <slot />
+
+
+                <hr>
+
+                <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+                    <img src="/imgs/kfu.png" style="
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    object-fit: contain;
+">
+
+                    <br>
+
+                    Кфу {{new Date().getFullYear()}} <br>
+                    Сделано: Фаид Абдельрахман
+                    <br>
+                    под руководством преподавателя: Динары Фахретдиновой.
+                </footer>
+
             </main>
         </div>
     </div>

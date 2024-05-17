@@ -216,6 +216,9 @@ function handleImageError() {
     height: 50px;
     object-fit: contain;
 ">
+
+                    <br>
+
                     Кфу {{new Date().getFullYear()}} <br>
                     Сделано: Фаид Абдельрахман
                     <br>
